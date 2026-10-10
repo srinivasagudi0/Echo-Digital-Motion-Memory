@@ -24,16 +24,42 @@ function cords() {
 function draw() {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
-    
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    
-    ctx.beginPath();
-    ctx.moveTo(100,100);
-    ctx.lineTo(400,300);
-    ctx.strokeStyle = "cyan";
-    ctx.lineWidth = 3;
-    ctx.stroke();
+
+    let previousX;
+    let previousY;
+    let isDrawing = false;
+
+    document.addEventListener("mousedown", (event) => {
+        isDrawing = true;
+        previousX = event.clientX;
+        previousY = event.clientY;
+    });
+
+    document.addEventListener("mousemove", (event) => {
+        if (!isDrawing) return;
+
+        let currentX = event.clientX;
+        let currentY = event.clientY;
+
+        ctx.beginPath();
+        ctx.moveTo(previousX, previousY);
+        ctx.lineTo(currentX, currentY);
+
+        ctx.strokeStyle = "cyan";
+        ctx.lineWidth = 3;
+        ctx.lineCap = "round";
+        ctx.stroke();
+
+        previousX = currentX;
+        previousY = currentY;
+    });
+    document.addEventListener("mouseup", () => {
+        isDrawing = false;
+    });
 }
+
 draw();
 cords();

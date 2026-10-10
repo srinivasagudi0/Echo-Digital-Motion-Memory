@@ -64,3 +64,14 @@ body {
     font-weight: 600;
     color: #30d9c0;
 }
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    cursor:move;
+}
