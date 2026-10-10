@@ -50,3 +50,17 @@ body {
     border: 1px solid #344052;
     border-radius: 18px;
 }
+
+#cards {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#speed {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #30d9c0;
+}
