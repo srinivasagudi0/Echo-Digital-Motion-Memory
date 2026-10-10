@@ -21,4 +21,19 @@ function cords() {
     });
 }
 
+function draw() {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    ctx.beginPath();
+    ctx.moveTo(100,100);
+    ctx.lineTo(400,300);
+    ctx.strokeStyle = "cyan";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+}
+draw();
 cords();
