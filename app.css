@@ -35,3 +35,18 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
 }
+
+.footer {
+    position: fixed;
+    bottom: 30px;
+    left: 35px;
+    right: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 40px;
+    background: rgba(15,19,26,0.95);
+    border: 1px solid #344052;
+    border-radius: 18px;
+}
