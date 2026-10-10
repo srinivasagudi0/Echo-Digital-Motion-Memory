@@ -28,3 +28,6 @@ body {
     font-size: 1.3rem;
     top: 30px;
 }
+#speed {
+    text-align: left;
+}
